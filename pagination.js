@@ -21,6 +21,9 @@ async function fetchPosts(page) {
     console.log(data);
     renderPosts(data);
   } catch (error) {
+    if (error) {
+      console.log("Error fetching posts");
+    }
     console.log(error);
   }
 }
